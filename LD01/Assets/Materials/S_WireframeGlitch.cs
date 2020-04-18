@@ -30,9 +30,12 @@ public class S_WireframeGlitch : MonoBehaviour
                 //Do Glitch
                 float originalWireThickness = wireframeMaterial.GetFloat("_WireThickness");
                 float originalWireSmoothness = wireframeMaterial.GetFloat("_WireSmoothness");
+
                 wireframeMaterial.SetFloat("_WireThickness", Random.Range(0, glitchThicknessIntensity));
                 wireframeMaterial.SetFloat("_WireSmoothness", Random.Range(0, glitchSmoothnessIntensity));
+
                 yield return new WaitForSeconds(Random.Range(0.05f, glitchIntensity));
+
                 wireframeMaterial.SetFloat("_WireThickness", originalWireThickness);
                 wireframeMaterial.SetFloat("_WireSmoothness", originalWireSmoothness);
             }
