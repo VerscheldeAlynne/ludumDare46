@@ -6,7 +6,7 @@ public class pickup : MonoBehaviour
 {
    
 
-    private void OnTrigger (Collider other)
+    private void OnTriggerEnter (Collider other)
     {
         Debug.Log("entered");
         
