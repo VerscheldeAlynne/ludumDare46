@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93fa691df2f6d9f409e0206ee4239c78
+guid: 284581a2affe36145a4cf73d96d8919d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -52,7 +52,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    meshOptimizationFlags: 0
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -68,7 +68,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
