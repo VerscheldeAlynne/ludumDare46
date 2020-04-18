@@ -7,8 +7,6 @@ Shader "SuperSystems/Wireframe-Shaded-Unlit"
 		_WireSmoothness ("Wire Smoothness", RANGE(0, 20)) = 3
 		_WireColor ("Wire Color", Color) = (0.0, 1.0, 0.0, 1.0)
 		_BaseColor ("Base Color", Color) = (0.0, 0.0, 0.0, 1.0)
-		_GlitchSpeed("Glitch Speed", Range(0, 50)) = 50.0
-		_GlitchIntensity("Glitch Intensity", Range(0.0, 0.1)) = 0
 	}
 
 	SubShader

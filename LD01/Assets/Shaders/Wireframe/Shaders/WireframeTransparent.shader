@@ -7,8 +7,6 @@ Shader "SuperSystems/Wireframe-Transparent"
 		_WireColor ("Wire Color", Color) = (0.0, 1.0, 0.0, 1.0)
 		_BaseColor ("Base Color", Color) = (0.0, 0.0, 0.0, 0.0)
 		_MaxTriSize ("Max Tri Size", RANGE(0, 200)) = 25
-		_GlitchSpeed("Glitch Speed", Range(0, 50)) = 50.0
-		_GlitchIntensity("Glitch Intensity", Range(0.0, 0.1)) = 0
 	}
 
 	SubShader
