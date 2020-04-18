@@ -5,7 +5,9 @@ public class S_MeshGlitch : MonoBehaviour
     [Tooltip("Glitch intensity")]
     public float glitchIntensity = 0.01f;
     [Tooltip("Maximum distance a vertex can stray from its original point")]
-    public float maxGlitchiness = 0.5f; 
+    public float maxGlitchiness = 0.5f;
+    [Tooltip("Time delta in seconds to glitch")]
+    public float glitchFrequency = .15f;
 
     Mesh mesh;
     Vector3[] vertices;
@@ -17,20 +19,24 @@ public class S_MeshGlitch : MonoBehaviour
         vertices = mesh.vertices;
         verticesOriginalLocation = mesh.vertices;
 
+        InvokeRepeating("MeshGlitch", 0, glitchFrequency);
+
     }
 
     void Update()
     {
-        
+    }
+
+    void MeshGlitch()
+    {
         for (var i = 0; i < vertices.Length; i++)
         {
-            Vector3 glitchMovement = new Vector3(Random.Range(glitchIntensity*-1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity));
+            Vector3 glitchMovement = new Vector3(Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity));
             vertices[i] = vertices[i] + glitchMovement;
         }
 
         // assign the local vertices array into the vertices array of the Mesh.
         mesh.vertices = vertices;
-        //mesh.RecalculateBounds();
 
         for (var i = 0; i < vertices.Length; i++)
         {
@@ -42,7 +48,5 @@ public class S_MeshGlitch : MonoBehaviour
 
         // assign the local vertices array into the vertices array of the Mesh.
         mesh.vertices = vertices;
-        //mesh.RecalculateBounds();
-
     }
 }
