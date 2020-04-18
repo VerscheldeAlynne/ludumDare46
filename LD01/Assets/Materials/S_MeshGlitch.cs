@@ -6,17 +6,19 @@ public class S_MeshGlitch : MonoBehaviour
 
     Mesh mesh;
     Vector3[] vertices;
+    Vector3[] verticesOriginalLocation;
 
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
         vertices = mesh.vertices;
+        verticesOriginalLocation = mesh.vertices;
+
     }
 
     void Update()
     {
-        Vector3[] vertexOriginalLocation = vertices;
-
+        
         for (var i = 0; i < vertices.Length; i++)
         {
             Vector3 glitchMovement = new Vector3(Random.Range(glitchIntensity*-1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity));
@@ -29,7 +31,10 @@ public class S_MeshGlitch : MonoBehaviour
 
         for (var i = 0; i < vertices.Length; i++)
         {
-            vertices[i] = vertexOriginalLocation[i];
+            if (Vector3.Distance(vertices[i], verticesOriginalLocation[i]) > 0.5f)
+            {
+                vertices[i] = verticesOriginalLocation[i];
+            }
         }
 
         // assign the local vertices array into the vertices array of the Mesh.
