@@ -6,9 +6,14 @@ public class pickup : MonoBehaviour
 {
    
 
-    private void OnTriggerEnter (Collider other)
+    private void OnTriggerStay (Collider other)
     {
-        Debug.Log("entered");
-        
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Debug.Log("pickup");
+        }
     }
+
+   
 }
