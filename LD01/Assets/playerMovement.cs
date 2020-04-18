@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-
+    //control movement
     public CharacterController controller;
-
-
+    //movement
     public float moveSpeed = 12f;
     public float gravity = -9.81f;
-
+    float x;
+    float z;
+    Vector3 move;
+    //ground and gravity
     public Transform groundCheck;
     public float groundDistance = .4f;
     public LayerMask groundMask;
-
-    float x;
-    float z;
-
-    Vector3 move;
     Vector3 velocity;
     bool isGrounded;
-
-
 
     // Update is called once per frame
     void Update()
