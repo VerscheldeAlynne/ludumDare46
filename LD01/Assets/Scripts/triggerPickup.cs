@@ -10,15 +10,16 @@ public class triggerPickup : MonoBehaviour
 
     private void OnTriggerStay (Collider other)
     {
-
-        if (Input.GetButtonDown("Jump"))
+        if (other.tag == "well")
         {
-
-            Debug.Log("pickup");
-            tool.transform.position = destination.position;
-            tool.transform.parent = GameObject.Find("toolDestination").transform;
+            if (Input.GetButtonDown("Jump"))
+            {
+                Debug.Log("emmer");
+                tool.transform.position = destination.position;
+                tool.transform.parent = GameObject.Find("toolDestination").transform;
+                tool.GetComponent<Renderer>().enabled = true;
+            }
         }
-            
     }
 
    
