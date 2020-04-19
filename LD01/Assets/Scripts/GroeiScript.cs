@@ -24,7 +24,7 @@ public class GroeiScript : MonoBehaviour
         //int i=0;
         foreach(Planten plant in planten)
         {
-            plant.groeiSpeed = water + mest;
+            //plant.groeiSpeed = water + mest;
             
         }
 

@@ -39,31 +39,19 @@ public class Planten : MonoBehaviour
         plantTimer = timings[0]; //toon eerste plantje
         //Debug.Log("antal planten " + planten.Count);
         //Debug.Log("antal timings " + timings.Count);
-        plantTimer = Random.Range(timings[0], timings[1]);
+        plantTimer = Random.Range(timings[0], timings[3]);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log ("groeispeed " + groeiSpeed);
-        if(groeiSpeed >= 1)
-        {
-            if (!growing)
-            {
-                maakNat();
-            }    
-        }else if (growing)
-        {
-             maakDroog();
-        }
-        
+      
 
         if (growing)
-        { 
-          
+        {           
             plantTimer += groeiSpeed * Time.deltaTime;
-            Debug.Log ("Timer " + plantTimer);
+            //Debug.Log ("Timer " + plantTimer);
 
             if (plantTimer > timings[0] && change == 0)
             {
@@ -79,10 +67,6 @@ public class Planten : MonoBehaviour
                 ToonNiuewePlant(3);
                 harvestAble = true;
                 //Harvest();//for debugging moet nog checekn met boer collider
-            }if (plantTimer> timings[4] && change == 4)
-            {
-                harvestAble = false;
-                Sterf();
             }
         }
         
@@ -104,11 +88,13 @@ public class Planten : MonoBehaviour
     public void Harvest()
     {
         moneyScript.addMoney(1);//TODO Get MONEY!!!  invoegen in gamamanger of zo iets
+        harvestAble = false;
         planten[4].transform.gameObject.SetActive(false);
         //play sound
         //toon "glitch Ruby"
         plantTimer = 0; // 
         change = 0;
+        growing = false;
     }
 
     public void Sterf()
@@ -122,25 +108,20 @@ public class Planten : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log (this);
+        //Debug.Log (this);
         if(harvestAble)
         {
             if (other.gameObject.tag == "Player")
             {
-                Harvest();
+                giveWater();
+                Harvest();  
             }
         }
+        
     }
 
-    private void maakDroog()
+    private void giveWater()
     {   
-        //change UVS
-        growing = false;
-    }
-
-        private void maakNat()
-    {    
-        //change UVS
         growing = true;
     }
 }
