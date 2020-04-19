@@ -8,6 +8,7 @@ public class S_MeshGlitch : MonoBehaviour
     public float maxGlitchiness = 0.5f;
     [Tooltip("Time delta in seconds to glitch")]
     public float glitchFrequency = .15f;
+    public bool glitchOnSpawn = false;
 
     Mesh mesh;
     Vector3[] vertices;
@@ -19,34 +20,44 @@ public class S_MeshGlitch : MonoBehaviour
         vertices = mesh.vertices;
         verticesOriginalLocation = mesh.vertices;
 
-        InvokeRepeating("MeshGlitch", 0, glitchFrequency);
-
+        if (glitchOnSpawn == true)
+        {
+            InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+        }
     }
 
     void Update()
     {
+
     }
 
     void MeshGlitch()
     {
-        for (var i = 0; i < vertices.Length; i++)
-        {
-            Vector3 glitchMovement = new Vector3(Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity));
-            vertices[i] = vertices[i] + glitchMovement;
-        }
+        if (gameObject.active == true) { 
+                for (var i = 0; i < vertices.Length; i++)
+                {
+                    Vector3 glitchMovement = new Vector3(Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity), Random.Range(glitchIntensity * -1, glitchIntensity));
+                    vertices[i] = vertices[i] + glitchMovement;
+                }
 
-        // assign the local vertices array into the vertices array of the Mesh.
-        mesh.vertices = vertices;
+            // assign the local vertices array into the vertices array of the Mesh.
+            mesh.vertices = vertices;
 
-        for (var i = 0; i < vertices.Length; i++)
-        {
-            if (Vector3.Distance(vertices[i], verticesOriginalLocation[i]) > 0.5f)
+            for (var i = 0; i < vertices.Length; i++)
             {
-                vertices[i] = verticesOriginalLocation[i];
+                if (Vector3.Distance(vertices[i], verticesOriginalLocation[i]) > 0.5f)
+                {
+                    vertices[i] = verticesOriginalLocation[i];
+                }
             }
-        }
 
-        // assign the local vertices array into the vertices array of the Mesh.
-        mesh.vertices = vertices;
+            // assign the local vertices array into the vertices array of the Mesh.
+            mesh.vertices = vertices;
+        }
+    }
+
+    void StartGlitching()
+    {
+        InvokeRepeating("MeshGlitch", 0, glitchFrequency);
     }
 }

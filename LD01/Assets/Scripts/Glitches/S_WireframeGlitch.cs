@@ -8,39 +8,46 @@ public class S_WireframeGlitch : MonoBehaviour
     public float glitchIntensity = 0.1f;
     public float glitchThicknessIntensity = 800;
     public float glitchSmoothnessIntensity = 20;
-
+    [Tooltip("Time delta in seconds to glitch")]
+    public float glitchFrequency = .15f;
+    public bool glitchOnSpawn = false;
 
     Material wireframeMaterial;
     WaitForSeconds glitchLoopWait = new WaitForSeconds(0.1f);
 
-    void Awake()
+
+    void Start()
     {
         wireframeMaterial = GetComponent<Renderer>().material;
+
+        if (glitchOnSpawn == true)
+        {
+            InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+        }
     }
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    void WireframeGlitch()
     {
-        while (true)
+        float glitchTest = Random.Range(0f, 1f);
+
+        if (glitchTest <= glitchChance)
         {
-            float glitchTest = Random.Range(0f, 1f);
+            //Do Glitch
+            float originalWireThickness = wireframeMaterial.GetFloat("_WireThickness");
+            float originalWireSmoothness = wireframeMaterial.GetFloat("_WireSmoothness");
 
-            if (glitchTest <= glitchChance)
-            {
-                //Do Glitch
-                float originalWireThickness = wireframeMaterial.GetFloat("_WireThickness");
-                float originalWireSmoothness = wireframeMaterial.GetFloat("_WireSmoothness");
+            wireframeMaterial.SetFloat("_WireThickness", Random.Range(0, glitchThicknessIntensity));
+            wireframeMaterial.SetFloat("_WireSmoothness", Random.Range(0, glitchSmoothnessIntensity));
 
-                wireframeMaterial.SetFloat("_WireThickness", Random.Range(0, glitchThicknessIntensity));
-                wireframeMaterial.SetFloat("_WireSmoothness", Random.Range(0, glitchSmoothnessIntensity));
 
-                yield return new WaitForSeconds(Random.Range(0.05f, glitchIntensity));
-
-                wireframeMaterial.SetFloat("_WireThickness", originalWireThickness);
-                wireframeMaterial.SetFloat("_WireSmoothness", originalWireSmoothness);
-            }
-
-            yield return glitchLoopWait;
+            wireframeMaterial.SetFloat("_WireThickness", originalWireThickness);
+            wireframeMaterial.SetFloat("_WireSmoothness", originalWireSmoothness);
         }
+    }
+
+    void StartGlitching()
+    {
+        InvokeRepeating("MeshGlitch", 0, glitchFrequency);
     }
 }

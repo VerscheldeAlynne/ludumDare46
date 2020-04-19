@@ -10,6 +10,7 @@ public class S_GlitchFruit : MonoBehaviour
     [Tooltip("Time delta in seconds to glitch")]
     public float glitchFrequency = 1;
     public float glitchChance = 0.5f;
+    public bool glitchOnSpawn = false;
 
     public GameObject meshRed;
     public GameObject meshBlue;
@@ -19,19 +20,26 @@ public class S_GlitchFruit : MonoBehaviour
 
     Mesh mesh;
 
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
+        //meshRed = Instantiate(gameObject);
+        //meshBlue = Instantiate(gameObject);
+
         meshRed.GetComponents<MeshRenderer>()[0].enabled = false;
         meshBlue.GetComponents<MeshRenderer>()[0].enabled = false;
-        InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+
+        if (glitchOnSpawn == true)
+        {
+            InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void GlitchFruit()
@@ -56,5 +64,10 @@ public class S_GlitchFruit : MonoBehaviour
             meshBlue.GetComponents<MeshRenderer>()[0].enabled = false;
 
         }
+    }
+
+    void StartGlitching()
+    {
+        InvokeRepeating("GlitchFruit", 0, glitchFrequency);
     }
 }
