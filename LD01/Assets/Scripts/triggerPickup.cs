@@ -20,7 +20,11 @@ public class triggerPickup : MonoBehaviour
                 tool.GetComponent<Renderer>().enabled = true;
             }
         }
+
+
     }
+
+
 
    
 }
