@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 893451851}
-  - component: {fileID: 1479628264}
   m_Layer: 0
   m_Name: AllePlanten
   m_TagString: Untagged
@@ -76,67 +75,6 @@ Transform:
   m_Father: {fileID: 4052048090081734811}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1479628264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893451850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8913dae459c0b424d80460dbb2fb3660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  water: 100
-  mest: 100
-  verdrooging: 5
-  planten:
-  - {fileID: 2728458593241096445}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &4052048090081734810
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +485,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &8465163043094639919 stripped
@@ -722,6 +670,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &8621900800784622838 stripped
@@ -821,6 +779,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -922,6 +890,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &9098562511735875423 stripped
@@ -1021,6 +999,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -1212,6 +1200,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &6965192699647152924 stripped
@@ -1312,6 +1310,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &7942503019879809402 stripped
@@ -1411,6 +1419,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -1587,6 +1605,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &7767152765892528365 stripped
@@ -1686,6 +1714,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -1903,6 +1941,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &6775926196771383157 stripped
@@ -2002,6 +2050,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -2103,6 +2161,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &5045233078893443896 stripped
@@ -2202,6 +2270,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -2303,6 +2381,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &4728021487234115679 stripped
@@ -2402,6 +2490,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -2583,6 +2681,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &3860306715363972826 stripped
@@ -2683,6 +2791,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &3956225256774169353 stripped
@@ -2782,6 +2900,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -2973,6 +3101,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &4054557186313760282 stripped
@@ -3072,6 +3210,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -3173,6 +3321,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &2728458593241096434 stripped
@@ -3181,18 +3339,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5903704878160699686}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2728458593241096445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
-    type: 3}
-  m_PrefabInstance: {fileID: 5903704878160699686}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7027869517989d34e8553d3d1637b303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6035463351113275548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3284,6 +3430,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -3385,6 +3541,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &2435497802792531651 stripped
@@ -3484,6 +3650,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -3585,6 +3761,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1521547428662584255 stripped
@@ -3684,6 +3870,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -3785,6 +3981,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1555187411008506129 stripped
@@ -3884,6 +4090,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -3985,6 +4201,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &2034117203093159407 stripped
@@ -4084,6 +4310,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -4185,6 +4421,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1880876857944264717 stripped
@@ -4284,6 +4530,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -4385,6 +4641,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1951266584234226355 stripped
@@ -4484,6 +4750,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -4585,6 +4861,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &16964059724610000 stripped
@@ -4684,6 +4970,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -4785,6 +5081,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &32892232153492935 stripped
@@ -4884,6 +5190,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -4985,6 +5301,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1000274715100460176 stripped
@@ -5084,6 +5410,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -5185,6 +5521,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &1069175003529857572 stripped
@@ -5285,6 +5631,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPrefab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
 --- !u!4 &716069060728295243 stripped
@@ -5384,6 +5740,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}
@@ -5564,6 +5930,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}

@@ -90,38 +90,48 @@ public class Planten : MonoBehaviour
         moneyScript.addMoney(1);//TODO Get MONEY!!!  invoegen in gamamanger of zo iets
         harvestAble = false;
         planten[4].transform.gameObject.SetActive(false);
+        //planten[0].transform.gameObject.SetActive(true);
         //play sound
         //toon "glitch Ruby"
-        plantTimer = 0; // 
+         // 
         change = 0;
+        plantTimer = 0;
         growing = false;
     }
 
-    public void Sterf()
+    /*public void Sterf()
     {
         planten[4].transform.gameObject.SetActive(false);
         planten[0].transform.gameObject.SetActive(true);
         plantTimer = 0; // start timer van 0, eerste timing gedeelte is de stervende plant
         change = 0;
 
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log (this);
-        if(harvestAble)
+        
+
+        if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.tag == "Player")
-            {
+            if (plantTimer< timings[0]){
                 giveWater();
-                Harvest();  
+                
             }
+            
+            if(harvestAble)
+            {
+                Harvest();
+                Debug.Log (this);
+            }    
         }
+
         
     }
 
     private void giveWater()
     {   
         growing = true;
+        planten[0].transform.gameObject.SetActive(true);
     }
 }
