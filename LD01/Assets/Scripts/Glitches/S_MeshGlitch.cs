@@ -56,7 +56,7 @@ public class S_MeshGlitch : MonoBehaviour
         }
     }
 
-    void StartGlitching()
+    public void StartGlitching()
     {
         InvokeRepeating("MeshGlitch", 0, glitchFrequency);
     }

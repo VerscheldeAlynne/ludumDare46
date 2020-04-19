@@ -66,7 +66,7 @@ public class S_GlitchFruit : MonoBehaviour
         }
     }
 
-    void StartGlitching()
+  public  void StartGlitching()
     {
         InvokeRepeating("GlitchFruit", 0, glitchFrequency);
     }

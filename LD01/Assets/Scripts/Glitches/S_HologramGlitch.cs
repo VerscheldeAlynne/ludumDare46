@@ -43,7 +43,7 @@ public class S_HologramGlitch : MonoBehaviour
 
     }
 
-    void StartGlitching()
+    public void StartGlitching()
     {
         InvokeRepeating("GlitchFruit", 0, glitchFrequency);
     }
