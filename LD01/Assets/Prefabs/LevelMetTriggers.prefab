@@ -3331,6 +3331,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893451851}
     m_Modifications:
+    - target: {fileID: 2897060626740827251, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368239231676818409, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182486278265249986, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333390227509926951, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281418110734568771, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8373109717013955028, guid: 16a98f29ce457d54c8fb6289c8137822,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3390,6 +3415,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: groeiSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373109717013955035, guid: 16a98f29ce457d54c8fb6289c8137822,
+        type: 3}
+      propertyPath: timings.Array.data[0]
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a98f29ce457d54c8fb6289c8137822, type: 3}

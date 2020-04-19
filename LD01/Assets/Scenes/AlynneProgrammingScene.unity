@@ -259,65 +259,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec426f650694314aacb1c3d1cee170b, type: 3}
---- !u!1 &1277051335 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4266064401277215746, guid: f4f85bc2612d8634e8eace356df06110,
-    type: 3}
-  m_PrefabInstance: {fileID: 624294803}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1277051337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277051335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51fd9bea7aea7114094bb6cf6e15de36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glitchChance: 0.1
-  glitchIntensity: 0.1
-  glitchThicknessIntensity: 800
-  glitchSmoothnessIntensity: 20
-  glitchFrequency: 0.15
-  glitchOnSpawn: 0
---- !u!114 &1277051339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277051335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27de0e4dd9e2560498cb7f393bea888f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glitchChance: 0.1
-  glitchFrequency: 1
-  glitchOnSpawn: 0
---- !u!114 &1277051340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277051335}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a3c1c02f81a57c4fbcd9e13f53a16a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glitchDistance: 1
-  glitchFrequency: 1
-  glitchChance: 0.5
-  glitchOnSpawn: 0
-  meshRed: {fileID: 0}
-  meshBlue: {fileID: 0}
-  red: {fileID: 0}
-  blue: {fileID: 0}
 --- !u!1001 &1481678647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -509,8 +450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teller: 0
-  gltichObjects:
-  - {fileID: 1277051335}
 --- !u!4 &1772271631
 Transform:
   m_ObjectHideFlags: 0
