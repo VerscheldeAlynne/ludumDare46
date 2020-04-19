@@ -64,8 +64,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlitchIntensity: 0.0139
-    - _GlitchSpeed: 20.3
+    - _GlitchIntensity: 0.0188
+    - _GlitchSpeed: 25.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -75,7 +75,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Scale: 10
-    - _ScrollSpeedV: 1.54
+    - _ScrollSpeedV: 1.58
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
