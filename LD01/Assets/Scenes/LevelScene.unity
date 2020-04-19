@@ -849,7 +849,132 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 16964059724610015, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 32613381757945020, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 32892232153492936, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 175101005829942811, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 332916220713717459, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 716069060728295236, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 729349842060046862, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 830840677977891898, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1000274715100460191, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1036251868399761665, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1069175003529857579, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1335879528991420151, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1521547428662584240, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1533948109297201444, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1555187411008506142, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1880876857944264706, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1900684687776278175, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 1951266584234226364, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 2034117203093159392, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 2253947909251300674, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 2435497802792531660, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
     - target: {fileID: 2728458593241096445, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 2878089453740742983, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 2962269295889383718, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 3860306715363972821, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 3956225256774169350, guid: f4f85bc2612d8634e8eace356df06110,
         type: 3}
       propertyPath: moneyScript
       value: 
@@ -914,6 +1039,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4054557186313760277, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 4124293668618860525, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 4400179894058399955, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 4728021487234115664, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 4932167210213049080, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 5045233078893443895, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 5083410996144045132, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 5491509569639723599, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
     - target: {fileID: 5903704877775573532, guid: f4f85bc2612d8634e8eace356df06110,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -929,6 +1094,61 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9af3452e861fc2649a5d9176b515787e, type: 2}
+    - target: {fileID: 6282414629813567294, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 6775926196771383162, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 6965192699647152915, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 7767152765892528354, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 7942503019879809397, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 8051186807372858973, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 8194852484194940843, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 8465163043094639904, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 8621900800784622841, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 8836284272546708514, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
+    - target: {fileID: 9098562511735875408, guid: f4f85bc2612d8634e8eace356df06110,
+        type: 3}
+      propertyPath: moneyScript
+      value: 
+      objectReference: {fileID: 1137241005}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f85bc2612d8634e8eace356df06110, type: 3}
 --- !u!1001 &8710454756049298541

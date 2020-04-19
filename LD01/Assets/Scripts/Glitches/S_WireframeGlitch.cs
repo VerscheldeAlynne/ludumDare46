@@ -48,6 +48,6 @@ public class S_WireframeGlitch : MonoBehaviour
 
    public  void StartGlitching()
     {
-        InvokeRepeating("MeshGlitch", 0, glitchFrequency);
+        InvokeRepeating("WireframeGlitch", 0, glitchFrequency);
     }
 }
