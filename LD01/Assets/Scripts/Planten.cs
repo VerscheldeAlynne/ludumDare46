@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Planten : MonoBehaviour
 {
+    public MoneyScript moneyScript;
 
-    public int groeiSpeed;
+    public float groeiSpeed;
+    public bool harvestAble;
     public List<int> timings;
     public List<GameObject> planten;
-    private int plantTimer;
-    public bool growing;
+    private float plantTimer;
+    private bool growing;
+    private int change;
 
     //List<GameObject> planten;
 
@@ -17,12 +20,22 @@ public class Planten : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //moneyScript =  (MoneyScript) GameObject.FindObjectOfType(typeof(MoneyScript));
         //planten = new List<GameObject>();
         //timings = new List<int>();
         //foreach (Transform child in transform) planten.Add(child.gameObject);
+
+        //hide alle planten bij de start
+        for (int i = 0; i < planten.Count; i++)
+        {
+            planten[i].transform.gameObject.SetActive(false);
+        }
+
         Quaternion rotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
         transform.rotation = rotation;
         growing = true;
+        change = 0;
+        harvestAble = false;
         plantTimer = timings[0]; //toon eerste plantje
         //Debug.Log("antal planten " + planten.Count);
         //Debug.Log("antal timings " + timings.Count);
@@ -33,38 +46,55 @@ public class Planten : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log ("groeispeed " + groeiSpeed);
+        if(groeiSpeed >= 1)
+        {
+            if (!growing)
+            {
+                maakNat();
+            }    
+        }else if (growing)
+        {
+             maakDroog();
+        }
+        
+
         if (growing)
         { 
-            plantTimer += groeiSpeed;
+          
+            plantTimer += groeiSpeed * Time.deltaTime;
+            Debug.Log ("Timer " + plantTimer);
 
-            if (plantTimer == timings[0])
+            if (plantTimer > timings[0] && change == 0)
             {
                 ToonNiuewePlant(0);
-            }else if (plantTimer == timings[1])
+            }if (plantTimer>  timings[1] && change == 1)
             {
                 ToonNiuewePlant(1);
-            }else if (plantTimer == timings[2])
+            }if (plantTimer> timings[2] && change == 2)
             {
                 ToonNiuewePlant(2);
-            }else if (plantTimer == timings[3])
+            }if (plantTimer> timings[3] && change == 3)
             {
                 ToonNiuewePlant(3);
-            }else if (plantTimer == timings[4])
+                harvestAble = true;
+                //Harvest();//for debugging moet nog checekn met boer collider
+            }if (plantTimer> timings[4] && change == 4)
             {
+                harvestAble = false;
                 Sterf();
             }
-
-
-
         }
         
     }
 
     void ToonNiuewePlant (int plantNr)
     {
-        //if(planten[0].transform.gameObject.activeSelf == true){
             planten[plantNr].transform.gameObject.SetActive(false);
             planten[plantNr+1].transform.gameObject.SetActive(true);
+            change ++;
+        //if(planten[0].transform.gameObject.activeSelf == true){
+            
             //gameObject.transform.GetChild(0).gameObject.SetActive(false);
             //gameObject.transform.GetChild(1).gameObject.SetActive(true);
         //}
@@ -73,11 +103,12 @@ public class Planten : MonoBehaviour
 
     public void Harvest()
     {
-        //TODO Get MONEY!!!  invoegen in gamamanger of zo iets
+        moneyScript.addMoney(1);//TODO Get MONEY!!!  invoegen in gamamanger of zo iets
+        planten[4].transform.gameObject.SetActive(false);
         //play sound
         //toon "glitch Ruby"
         plantTimer = 0; // 
-
+        change = 0;
     }
 
     public void Sterf()
@@ -85,6 +116,31 @@ public class Planten : MonoBehaviour
         planten[4].transform.gameObject.SetActive(false);
         planten[0].transform.gameObject.SetActive(true);
         plantTimer = 0; // start timer van 0, eerste timing gedeelte is de stervende plant
+        change = 0;
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log (this);
+        if(harvestAble)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                Harvest();
+            }
+        }
+    }
+
+    private void maakDroog()
+    {   
+        //change UVS
+        growing = false;
+    }
+
+        private void maakNat()
+    {    
+        //change UVS
+        growing = true;
     }
 }

@@ -367,8 +367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7027869517989d34e8553d3d1637b303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyScript: {fileID: 0}
   groeiSpeed: 1
-  timings: 2c0100005802000084030000b0040000dc050000
+  harvestAble: 0
+  timings: e8030000d0070000b80b0000a00f000088130000
   planten:
   - {fileID: 509663200400010526}
   - {fileID: 7182486278265249986}
