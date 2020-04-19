@@ -19,6 +19,7 @@ public class playerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -45,5 +46,25 @@ public class playerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public Vector3 GetVelocity()
+    {
+        return velocity;
+    }
+
+    public Vector3 GetMove()
+    {
+        return move;
+    }
+
+    public float GetZ()
+    {
+        return z;
+    }
+
+    public float GetX()
+    {
+        return x;
     }
 }
