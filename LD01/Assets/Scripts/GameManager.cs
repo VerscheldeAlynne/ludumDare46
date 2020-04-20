@@ -7,13 +7,11 @@ public class GameManager : MonoBehaviour
 {
 
    public int teller = 0;
-   public GameObject[] gltichObjects;
    
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("Start GLitch");
-        makeGlitch(gltichObjects[0]);
+        
 
     }
 
@@ -24,13 +22,10 @@ public class GameManager : MonoBehaviour
 
         if (teller == Random.Range(0, 100))
         {
-            /*
             List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
             GameObject randomObject = lijstGameObjects[random];
             makeGlitch(randomObject);
-            */
-            makeGlitch(gltichObjects[0]);
         }
 
         if (teller == 100) teller = 0;
@@ -40,37 +35,39 @@ public class GameManager : MonoBehaviour
 
     void makeGlitch(GameObject randomObject)
     {
-        Debug.Log("Start GLitch");
 
-       // if (randomObject.GetComponent<S_GlitchFruit>() != null)
-        //{
-            int smallRandom = Random.Range(0, 1);
-            Debug.Log(smallRandom);
-            
+        if (randomObject.GetComponent<S_GlitchFruit>() != null)
+        {
+            int smallRandom = Random.Range(0, 3);
             switch (smallRandom)
             {
-                
                 case 0:
-                    var script1 = randomObject.GetComponent<S_WireframeGlitch>();
-                    script1.StartGlitching();
-                    Debug.Log("meshglitch");
-                    break;
-                case 1:
-                    var script2 = randomObject.GetComponent<S_HologramGlitch>();
-                    script2.StartGlitching();
-                    Debug.Log("hologramglitch");
-                    break;
-                case 2:
-                    var script3 = randomObject.GetComponent<S_GlitchFruit>();
-                    script3.StartGlitching();
+                    var script = randomObject.GetComponent<S_GlitchFruit>();
+                    script.StartGlitching();
                     Debug.Log("glitchfruit");
                     break;
-                default:
+                case 1:
+                    var script1 = randomObject.GetComponent<S_HologramGlitch>();
+                    script1.StartGlitching();
+                    Debug.Log("hologramglitch");
+
+                    break;
+                case 2:
+                    var script2 = randomObject.GetComponent<S_MeshGlitch>();
+                    script2.StartGlitching();
+                    Debug.Log("meshglitch");
+
+                    break;
+                case 3:
+                    var script3 = randomObject.GetComponent<S_WireframeGlitch>();
+                    script3.StartGlitching();
+                    Debug.Log("wireframglitch");
+
                     break;
             }
 
 
-       // }
+        }
 
     }
 
