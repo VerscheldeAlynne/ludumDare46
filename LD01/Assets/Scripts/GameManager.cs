@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public int teller = 0;
+    public AudioClip crashSound;
+    public List<GameObject> lijstGameObjects;
+
     int tellerMax = 500;
     int randomMax = 550;
     int clickteller = 0;
-    public List<GameObject> lijstGameObjects;
+    bool crashSoundPlayed = false;
     //   public List<Planten> planten;
 
     MoneyScript money;
 
     // Start is called before the first frame update
     void Start()
-    {//List<GameObject> 
+    {
+        //List<GameObject> 
         lijstGameObjects = new List<GameObject>();
         lijstGameObjects.Add(GameObject.Find("Schuur"));
         lijstGameObjects.Add(GameObject.Find("Huis"));
@@ -25,7 +28,7 @@ public class GameManager : MonoBehaviour
         lijstGameObjects.Add(GameObject.Find("Waterput"));
         lijstGameObjects.Add(GameObject.Find("Veld"));
 
-   /*     planten = new List<Planten>();
+        /*     planten = new List<Planten>();
 
         for (int i = 0; i < planten.Count; i++)
         {
@@ -39,7 +42,6 @@ public class GameManager : MonoBehaviour
             //lijstGameObjects[i].AddComponent<S_HologramGlitch>();
             //lijstGameObjects[i].AddComponent<S_MeshGlitch>();
             lijstGameObjects[i].AddComponent<S_WireframeGlitch>();
-
 
         }
 
@@ -57,7 +59,6 @@ public class GameManager : MonoBehaviour
 
         if (teller >= tellerMax && teller == Random.Range(tellerMax, randomMax))
         {
-
             lijstGameObjects = new List<GameObject>();
             lijstGameObjects.Add(GameObject.Find("Schuur"));
             lijstGameObjects.Add(GameObject.Find("Huis"));
@@ -68,8 +69,6 @@ public class GameManager : MonoBehaviour
             lijstGameObjects.Add(GameObject.Find("Bomen_Den"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Eik"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Spar"));
-
-
 
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
@@ -82,11 +81,9 @@ public class GameManager : MonoBehaviour
 
         if (teller >= randomMax) teller = tellerMax;
 
-
-
-
         if (money.getMoney() < 0 )
         {
+            PlayCrashSound();
             Destroy(GameObject.Find("LevelMetTriggers"));
 
         }
@@ -95,40 +92,32 @@ public class GameManager : MonoBehaviour
     void OnMouseDown()
     {
        
-            clickteller++;
+        clickteller++;
 
+        int random = Random.Range(0, 9);
 
-            int random = Random.Range(0, 9);
+        money.spendMoney(++random);
 
+        if (random >= 8) Destroy(gameObject);
+        else
+        {
+            var script = gameObject.GetComponent<S_GlitchFruit>();
+            script.StopGlitching();
+            var script3 = gameObject.GetComponent<S_WireframeGlitch>();
+            script3.StopGlitching();
 
-            money.spendMoney(++random);
-
-
-
-            if (random >= 8) Destroy(gameObject);
-            else
-            {
-
-
-                var script = gameObject.GetComponent<S_GlitchFruit>();
-                script.StopGlitching();
-                var script3 = gameObject.GetComponent<S_WireframeGlitch>();
-                script3.StopGlitching();
-
-                GetComponent<AudioSource>().Play();
-
-
-            }
-
-            if (money.getMoney() <= 0 && clickteller >= 2)
-            {
-                Destroy(GameObject.Find("LevelMetTriggers"));
-
-            }
+            GetComponent<AudioSource>().Play();
         }
+
+        if (money.getMoney() <= 0 && clickteller >= 2)
+        {
+            PlayCrashSound();
+            Destroy(GameObject.Find("LevelMetTriggers"));
+        }
+    }
     
 
-        void makeGlitch(GameObject randomObject)
+    void makeGlitch(GameObject randomObject)
     {
 
         if (randomObject.GetComponent<S_GlitchFruit>() != null)
@@ -163,7 +152,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("Glitch should have happened");
         }
         Debug.Log("makeGlitch called");
+    }
 
+    void PlayCrashSound()
+    {
+        if (!GetComponent<AudioSource>().isPlaying && !crashSoundPlayed)
+        { 
+            GetComponent<AudioSource>().clip = crashSound;
+            GetComponent<AudioSource>().Play();
+            crashSoundPlayed = true;
+        }
     }
 
    /* List<GameObject> GetAllObjectsOnlyInScene()
