@@ -25,6 +25,9 @@ public class Planten : MonoBehaviour
         //timings = new List<int>();
         //foreach (Transform child in transform) planten.Add(child.gameObject);
 
+        if (FindObjectsOfType<MoneyScript>().Length != 0) { 
+            moneyScript = FindObjectsOfType<MoneyScript>()[0];
+        }
         //hide alle planten bij de start
         for (int i = 0; i < planten.Count; i++)
         {
@@ -40,7 +43,7 @@ public class Planten : MonoBehaviour
         //Debug.Log("antal planten " + planten.Count);
         //Debug.Log("antal timings " + timings.Count);
         plantTimer = Random.Range(timings[0], timings[3]);
-        
+
     }
 
     // Update is called once per frame
