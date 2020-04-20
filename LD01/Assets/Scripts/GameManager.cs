@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public int teller = 0;
     public AudioClip crashSound;
+    public AudioClip startGlitchSound;
+    public AudioClip fixGlitchSound;
     public List<GameObject> lijstGameObjects;
 
     int tellerMax = 500;
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
                         var script2 = clickedObject.GetComponent<S_WireframeGlitch>();
                         script2.StopGlitching();
 
-                        GetComponent<AudioSource>().Play();
+                        PlayGlitchFixSound();
                         money.spendMoney(3);
                     }
 
@@ -207,6 +209,7 @@ public class GameManager : MonoBehaviour
                 //    break;
             }
             Debug.Log("Glitch should have happened");
+            PlayStartGlitchSound();
         }
         Debug.Log("makeGlitch called");
     }
@@ -219,6 +222,18 @@ public class GameManager : MonoBehaviour
             GetComponent<AudioSource>().Play();
             crashSoundPlayed = true;
         }
+    }
+
+    void PlayStartGlitchSound()
+    {
+        GetComponent<AudioSource>().clip = startGlitchSound;
+        GetComponent<AudioSource>().Play();
+    }
+
+    void PlayGlitchFixSound()
+    {
+        GetComponent<AudioSource>().clip = fixGlitchSound;
+        GetComponent<AudioSource>().Play();
     }
 
    /* List<GameObject> GetAllObjectsOnlyInScene()
