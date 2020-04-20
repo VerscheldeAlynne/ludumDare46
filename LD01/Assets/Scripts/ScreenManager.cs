@@ -16,7 +16,7 @@ public class ScreenManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //if (Input.anyKey && gameStarted == false)
         //{
@@ -26,9 +26,9 @@ public class ScreenManager : MonoBehaviour
         //}
 
 
-        //if (Input.GetKey("escape"))
-        //{
-        //    Application.Quit();
-        //}
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 }
