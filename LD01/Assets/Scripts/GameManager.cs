@@ -7,11 +7,28 @@ public class GameManager : MonoBehaviour
 {
 
    public int teller = 0;
-   
+    public List<GameObject> lijstGameObjects;
+    public List<Planten> planten;
+
+
+
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {//List<GameObject> 
+        lijstGameObjects = new List<GameObject>();
+        lijstGameObjects.Add(GameObject.Find("Schuur"));
+        lijstGameObjects.Add(GameObject.Find("Huis"));
+        lijstGameObjects.Add(GameObject.Find("Mesthoop"));
+        planten = new List<Planten>();
+
+        for (int i = 0; i < planten.Count; i++)
+        {
+            planten[i].transform.gameObject.SetActive(false);
+        }
+
+        lijstGameObjects.Add(GameObject.Find("Waterput"));
+       
+
 
     }
 
