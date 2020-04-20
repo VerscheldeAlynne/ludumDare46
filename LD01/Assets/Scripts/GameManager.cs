@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
                 var script3 = gameObject.GetComponent<S_WireframeGlitch>();
                 script3.StopGlitching();
 
+                GetComponent<AudioSource>().Play();
 
 
             }

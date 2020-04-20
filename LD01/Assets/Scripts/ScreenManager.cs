@@ -18,17 +18,17 @@ public class ScreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey && gameStarted == false)
-        {
-            Screens[0].SetActive(false);
-            Debug.Log("A key or mouse click has been detected");
-            gameStarted = true;
-        }
+        //if (Input.anyKey && gameStarted == false)
+        //{
+        //    Screens[0].SetActive(false);
+        //    Debug.Log("A key or mouse click has been detected");
+        //    gameStarted = true;
+        //}
 
 
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
+        //if (Input.GetKey("escape"))
+        //{
+        //    Application.Quit();
+        //}
     }
 }

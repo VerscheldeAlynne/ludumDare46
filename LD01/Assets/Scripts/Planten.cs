@@ -5,6 +5,8 @@ using UnityEngine;
 public class Planten : MonoBehaviour
 {
     public MoneyScript moneyScript;
+    public AudioClip harvestSound;
+    public AudioClip waterSound;
 
     public float groeiSpeed;
     public bool harvestAble;
@@ -100,6 +102,9 @@ public class Planten : MonoBehaviour
         change = 0;
         plantTimer = 0;
         growing = false;
+
+        GetComponent<AudioSource>().clip = harvestSound;
+        GetComponent<AudioSource>().Play();
     }
 
     /*public void Sterf()
@@ -136,5 +141,7 @@ public class Planten : MonoBehaviour
     {   
         growing = true;
         planten[0].transform.gameObject.SetActive(true);
+        GetComponent<AudioSource>().clip = waterSound;
+        GetComponent<AudioSource>().Play();
     }
 }
