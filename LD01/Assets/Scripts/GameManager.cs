@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
 {
 
     public int teller = 0;
+    int tellerMax = 500;
+    int randomMax = 550;
+    int clickteller = 0;
     public List<GameObject> lijstGameObjects;
- //   public List<Planten> planten;
+    //   public List<Planten> planten;
 
-
+    MoneyScript money;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +43,10 @@ public class GameManager : MonoBehaviour
 
         }
 
-
+        if (FindObjectsOfType<MoneyScript>().Length != 0)
+        {
+            money = FindObjectsOfType<MoneyScript>()[0];
+        }
 
     }
 
@@ -49,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         teller++;
 
-        if (teller >= 50 && teller == Random.Range(50, 150))
+        if (teller >= tellerMax && teller == Random.Range(tellerMax, randomMax))
         {
 
             lijstGameObjects = new List<GameObject>();
@@ -74,12 +80,54 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (teller == 150) teller = 50;
+        if (teller >= randomMax) teller = tellerMax;
 
+
+
+
+        if (money.getMoney() < 0 )
+        {
+            Destroy(GameObject.Find("LevelMetTriggers"));
+
+        }
     }
 
+    void OnMouseDown()
+    {
+       
+            clickteller++;
 
-    void makeGlitch(GameObject randomObject)
+
+            int random = Random.Range(0, 9);
+
+
+            money.spendMoney(++random);
+
+
+
+            if (random >= 8) Destroy(gameObject);
+            else
+            {
+
+
+                var script = gameObject.GetComponent<S_GlitchFruit>();
+                script.StopGlitching();
+                var script3 = gameObject.GetComponent<S_WireframeGlitch>();
+                script3.StopGlitching();
+
+
+
+            }
+
+            if (money.getMoney() <= 0 && clickteller >= 2)
+            {
+                Destroy(GameObject.Find("LevelMetTriggers"));
+
+            }
+        }
+    
+
+        void makeGlitch(GameObject randomObject)
     {
 
         if (randomObject.GetComponent<S_GlitchFruit>() != null)
