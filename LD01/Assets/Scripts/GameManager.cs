@@ -83,7 +83,8 @@ public class GameManager : MonoBehaviour
                         var script2 = clickedObject.GetComponent<S_WireframeGlitch>();
                         script2.StopGlitching();
 
-
+                        GetComponent<AudioSource>().Play();
+                        money.spendMoney(3);
                     }
 
                     /*int random = Random.Range(0, 9);
