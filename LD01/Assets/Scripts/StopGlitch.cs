@@ -25,7 +25,7 @@ public class StopGlitch : MonoBehaviour
         int random = Random.Range(0, 9);
 
 
-        money.spendMoney(random+2);
+        money.spendMoney(++random);
 
 
 

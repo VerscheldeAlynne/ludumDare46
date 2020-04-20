@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    List<GameObject> GetAllObjectsOnlyInScene()
+   /* List<GameObject> GetAllObjectsOnlyInScene()
     {
         List<GameObject> objectsInScene = new List<GameObject>();
 
@@ -129,5 +129,5 @@ public class GameManager : MonoBehaviour
 
         return objectsInScene;
     }
-
+    */
 }
