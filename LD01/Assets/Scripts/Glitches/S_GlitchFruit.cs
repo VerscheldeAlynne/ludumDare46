@@ -22,11 +22,18 @@ public class S_GlitchFruit : MonoBehaviour
     Material wireframeMaterialRed;
     Material wireframeMaterialBlue;
 
+    MoneyScript moneyScript;
+
     Mesh mesh;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (FindObjectsOfType<MoneyScript>().Length != 0)
+        {
+            moneyScript = FindObjectsOfType<MoneyScript>()[0];
+        }
+
         Color red = new Color(1f, 0, 0);
         Color blue = new Color(0, 0, 1);
 
@@ -100,6 +107,12 @@ public class S_GlitchFruit : MonoBehaviour
     public void StartGlitching()
     {
         InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+        InvokeRepeating("TakeMoneyAway", 5, 5);
+    }
+
+    public void TakeMoneyAway()
+    {
+        moneyScript.spendMoney(1);
     }
 
     public void StopGlitching()
@@ -111,5 +124,7 @@ public class S_GlitchFruit : MonoBehaviour
         meshBlue.transform.localPosition = (gameObject.transform.localPosition);
 
         CancelInvoke("GlitchFruit");
+        CancelInvoke("TakeMoneyAway");
+
     }
 }
