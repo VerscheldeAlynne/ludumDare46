@@ -47,15 +47,20 @@ public class GameManager : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private void FixedUpdate()
     {
-
-       
-
-
-
         teller++;
 
         if (teller >= 50 && teller == Random.Range(50, 150))
         {
+
+            lijstGameObjects = new List<GameObject>();
+            lijstGameObjects.Add(GameObject.Find("Schuur"));
+            lijstGameObjects.Add(GameObject.Find("Huis"));
+            lijstGameObjects.Add(GameObject.Find("Mesthoop"));
+            lijstGameObjects.Add(GameObject.Find("Waterput"));
+            lijstGameObjects.Add(GameObject.Find("Veld"));
+
+
+
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
             GameObject randomObject = lijstGameObjects[random];
