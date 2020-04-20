@@ -19,6 +19,8 @@ public class S_GlitchFruit : MonoBehaviour
     public Material red;
     public Material blue;
 
+    public bool glitching;
+
     Material wireframeMaterialRed;
     Material wireframeMaterialBlue;
 
@@ -33,6 +35,7 @@ public class S_GlitchFruit : MonoBehaviour
         {
             moneyScript = FindObjectsOfType<MoneyScript>()[0];
         }
+        glitching = false;
 
         Color red = new Color(1f, 0, 0);
         Color blue = new Color(0, 0, 1);
@@ -106,6 +109,8 @@ public class S_GlitchFruit : MonoBehaviour
 
     public void StartGlitching()
     {
+        glitching = true;
+
         InvokeRepeating("GlitchFruit", 0, glitchFrequency);
         InvokeRepeating("TakeMoneyAway", 5, 5);
     }
@@ -117,6 +122,7 @@ public class S_GlitchFruit : MonoBehaviour
 
     public void StopGlitching()
     {
+        glitching = false;
         gameObject.GetComponents<MeshRenderer>()[0].enabled = true;
         meshRed.GetComponents<MeshRenderer>()[0].enabled = false;
         meshBlue.GetComponents<MeshRenderer>()[0].enabled = false;
@@ -125,6 +131,9 @@ public class S_GlitchFruit : MonoBehaviour
 
         CancelInvoke("GlitchFruit");
         CancelInvoke("TakeMoneyAway");
+
+        Debug.Log (gameObject.name + " stoped gliching");
+        
 
     }
 }
