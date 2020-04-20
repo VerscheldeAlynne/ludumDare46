@@ -37,10 +37,8 @@ public class S_GlitchFruit : MonoBehaviour
         meshRed.transform.localPosition = gameObject.transform.localPosition;
         meshRed.transform.localRotation = gameObject.transform.localRotation;
         meshRed.transform.localScale    = gameObject.transform.localScale;
-
         meshRed.AddComponent<MeshFilter>();
         meshRed.AddComponent<MeshRenderer>();
-
         meshRed.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
         meshRed.GetComponent<Renderer>().material = wireframeMaterialRed;
         meshRed.GetComponent<Renderer>().material.SetColor("_Color", red);
@@ -49,11 +47,9 @@ public class S_GlitchFruit : MonoBehaviour
         meshBlue = new GameObject();
         meshBlue.transform.localPosition = gameObject.transform.localPosition;
         meshBlue.transform.localRotation = gameObject.transform.localRotation;
-        meshBlue.transform.localScale = gameObject.transform.localScale;
-
+        meshBlue.transform.localScale    = gameObject.transform.localScale;
         meshBlue.AddComponent<MeshFilter>();
         meshBlue.AddComponent<MeshRenderer>();
-
         meshBlue.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
         meshBlue.GetComponent<Renderer>().material = wireframeMaterialBlue;
         meshBlue.GetComponent<Renderer>().material.SetColor("_Color", blue);
