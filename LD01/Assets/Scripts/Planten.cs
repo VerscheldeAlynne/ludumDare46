@@ -125,7 +125,7 @@ public class Planten : MonoBehaviour
             if(harvestAble)
             {
                 Harvest();
-                Debug.Log (this);
+               // Debug.Log (this);
             }    
         }
 

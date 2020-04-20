@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public int teller = 0;
     int tellerMax = 500;
-    int randomMax = 550;
+    int randomMax = 560;
     int clickteller = 0;
     public List<GameObject> lijstGameObjects;
     //   public List<Planten> planten;
@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour
 
 
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
-            int random = Random.Range(1, lijstGameObjects.Count);
-            GameObject randomObject = lijstGameObjects[random];
+            int randomvoorlijst = Random.Range(1, lijstGameObjects.Count);
+            GameObject randomObject = lijstGameObjects[randomvoorlijst];
             if (randomObject != null)
             {
                 makeGlitch(randomObject);
@@ -98,10 +98,10 @@ public class GameManager : MonoBehaviour
             clickteller++;
 
 
-            int random = Random.Range(0, 9);
+            int random = Random.Range(0, 10);
 
 
-            money.spendMoney(++random);
+            money.spendMoney(random++);
 
 
 
@@ -109,13 +109,12 @@ public class GameManager : MonoBehaviour
             else
             {
 
-
+            Debug.Log("fixglitch");
                 var script = gameObject.GetComponent<S_GlitchFruit>();
                 script.StopGlitching();
                 var script3 = gameObject.GetComponent<S_WireframeGlitch>();
                 script3.StopGlitching();
-
-
+            
 
             }
 
@@ -138,12 +137,12 @@ public class GameManager : MonoBehaviour
                 case 0:
                     var script = randomObject.GetComponent<S_GlitchFruit>();
                     script.StartGlitching();
-                    Debug.Log("glitchfruit");
+                    //Debug.Log("glitchfruit");
                     break;
                 case 1:
                     var script3 = randomObject.GetComponent<S_WireframeGlitch>();
                     script3.StartGlitching();
-                    Debug.Log("wireframeglitch");
+                    //Debug.Log("wireframeglitch");
 
                     break;
                 //case 2:
@@ -159,9 +158,9 @@ public class GameManager : MonoBehaviour
 
                 //    break;
             }
-            Debug.Log("Glitch should have happened");
+           // Debug.Log("Glitch should have happened");
         }
-        Debug.Log("makeGlitch called");
+        //Debug.Log("makeGlitch called");
 
     }
 
