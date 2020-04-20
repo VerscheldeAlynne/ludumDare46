@@ -6,11 +6,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-   public int teller = 0;
+    public int teller = 0;
     public List<GameObject> lijstGameObjects;
-    public List<Planten> planten;
-
-
+  
+    public List<GameObject> planten;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +18,33 @@ public class GameManager : MonoBehaviour
         lijstGameObjects.Add(GameObject.Find("Schuur"));
         lijstGameObjects.Add(GameObject.Find("Huis"));
         lijstGameObjects.Add(GameObject.Find("Mesthoop"));
-        planten = new List<Planten>();
+        lijstGameObjects.Add(GameObject.Find("Veld"));
+        lijstGameObjects.Add(GameObject.Find("Waterput"));
 
-        for (int i = 0; i < planten.Count; i++)
+       // planten = GameObject.FindGameObjectsWithTag("Plant")/*.GetComponent<Planten>().planten*/;
+
+        
+
+        for (int i = 0; i < lijstGameObjects.Count; i++)
         {
-            planten[i].transform.gameObject.SetActive(false);
+            lijstGameObjects[i].AddComponent<S_GlitchFruit>();
+            lijstGameObjects[i].AddComponent<S_HologramGlitch>();
+            lijstGameObjects[i].AddComponent<S_MeshGlitch>();
+            lijstGameObjects[i].AddComponent<S_WireframeGlitch>();
+
+           
         }
 
-        lijstGameObjects.Add(GameObject.Find("Waterput"));
-       
-
-
+      /*  for (int i = 0; i < planten.Count; i++)
+        {
+            planten[i].AddComponent<S_GlitchFruit>();
+            planten[i].AddComponent<S_HologramGlitch>();
+            planten[i].AddComponent<S_MeshGlitch>();
+            planten[i].AddComponent<S_WireframeGlitch>();
+            lijstGameObjects.Add(planten[i]);
+           
+        }
+        */
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -39,6 +54,7 @@ public class GameManager : MonoBehaviour
 
         if (teller == Random.Range(0, 100))
         {
+            Debug.Log("glitch happened");
             List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
             GameObject randomObject = lijstGameObjects[random];
