@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
 
     public int teller = 0;
     public List<GameObject> lijstGameObjects;
-  
-    public List<GameObject> planten;
+ //   public List<Planten> planten;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,50 +19,50 @@ public class GameManager : MonoBehaviour
         lijstGameObjects.Add(GameObject.Find("Schuur"));
         lijstGameObjects.Add(GameObject.Find("Huis"));
         lijstGameObjects.Add(GameObject.Find("Mesthoop"));
-        lijstGameObjects.Add(GameObject.Find("Veld"));
         lijstGameObjects.Add(GameObject.Find("Waterput"));
+        lijstGameObjects.Add(GameObject.Find("Veld"));
 
-       // planten = GameObject.FindGameObjectsWithTag("Plant")/*.GetComponent<Planten>().planten*/;
+   /*     planten = new List<Planten>();
 
-        
+        for (int i = 0; i < planten.Count; i++)
+        {
+            planten[i].transform.gameObject.SetActive(false);
+        }
+        */
 
         for (int i = 0; i < lijstGameObjects.Count; i++)
         {
             lijstGameObjects[i].AddComponent<S_GlitchFruit>();
-            lijstGameObjects[i].AddComponent<S_HologramGlitch>();
-            lijstGameObjects[i].AddComponent<S_MeshGlitch>();
+            //lijstGameObjects[i].AddComponent<S_HologramGlitch>();
+            //lijstGameObjects[i].AddComponent<S_MeshGlitch>();
             lijstGameObjects[i].AddComponent<S_WireframeGlitch>();
 
-           
+
         }
 
-      /*  for (int i = 0; i < planten.Count; i++)
-        {
-            planten[i].AddComponent<S_GlitchFruit>();
-            planten[i].AddComponent<S_HologramGlitch>();
-            planten[i].AddComponent<S_MeshGlitch>();
-            planten[i].AddComponent<S_WireframeGlitch>();
-            lijstGameObjects.Add(planten[i]);
-           
-        }
-        */
+
+
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private void FixedUpdate()
     {
+
+       
+
+
+
         teller++;
 
-        if (teller == Random.Range(0, 100))
+        if (teller >= 50 && teller == Random.Range(50, 150))
         {
-            Debug.Log("glitch happened");
-            List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
+            //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
             GameObject randomObject = lijstGameObjects[random];
             makeGlitch(randomObject);
         }
 
-        if (teller == 100) teller = 0;
+        if (teller == 150) teller = 50;
 
     }
 
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
 
         if (randomObject.GetComponent<S_GlitchFruit>() != null)
         {
-            int smallRandom = Random.Range(0, 3);
+            int smallRandom = Random.Range(0, 1);
             switch (smallRandom)
             {
                 case 0:
@@ -80,27 +81,27 @@ public class GameManager : MonoBehaviour
                     Debug.Log("glitchfruit");
                     break;
                 case 1:
-                    var script1 = randomObject.GetComponent<S_HologramGlitch>();
-                    script1.StartGlitching();
-                    Debug.Log("hologramglitch");
-
-                    break;
-                case 2:
-                    var script2 = randomObject.GetComponent<S_MeshGlitch>();
-                    script2.StartGlitching();
-                    Debug.Log("meshglitch");
-
-                    break;
-                case 3:
                     var script3 = randomObject.GetComponent<S_WireframeGlitch>();
                     script3.StartGlitching();
-                    Debug.Log("wireframglitch");
+                    Debug.Log("wireframeglitch");
 
                     break;
+                //case 2:
+                //    var script2 = randomObject.GetComponent<S_MeshGlitch>();
+                //    script2.StartGlitching();
+                //    Debug.Log("meshglitch");
+
+                //    break;
+                //case 3:
+                //    var script3 = randomObject.GetComponent<S_WireframeGlitch>();
+                //    script3.StartGlitching();
+                //    Debug.Log("wireframeglitch");
+
+                //    break;
             }
-
-
+            Debug.Log("Glitch should have happened");
         }
+        Debug.Log("makeGlitch called");
 
     }
 
