@@ -52,14 +52,69 @@ public class GameManager : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        
+        if (money.getMoney() <= 0 && clickteller >= 2)
+        {
+            PlayCrashSound();
+            Destroy(GameObject.Find("LevelMetTriggers"));
+        }
+        
+        if (Input.GetMouseButtonDown(0)){
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast (ray, out hit)){
+                GameObject clickedObject = hit.collider.transform.gameObject;
+                if (clickedObject.GetComponent<S_GlitchFruit>() != null)
+                {
+                    Debug.Log ("clicked glitchable object");
+                    var script = clickedObject.GetComponent<S_GlitchFruit>();
+                    
+                    //money.spendMoney (5); gebeurt in het glitchscript
+
+                    ////////
+                    clickteller++;
+
+                    if (script.glitching)
+                    {
+                        script.StopGlitching();
+                        var script2 = clickedObject.GetComponent<S_WireframeGlitch>();
+                        script2.StopGlitching();
+
+
+                    }
+
+                    /*int random = Random.Range(0, 9);
+
+                    //money.spendMoney(++random);
+
+                    if (random >= 8) Destroy(clickedObject);
+                    else
+                    {
+                        var script = clickedObject.GetComponent<S_GlitchFruit>();
+                        script.StopGlitching();
+                        var script3 = clickedObject.GetComponent<S_WireframeGlitch>();
+                        script3.StopGlitching();
+
+                        GetComponent<AudioSource>().Play();
+                    }*/
+                }
+
+
+            }
+        }
+    }
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private void FixedUpdate()
     {
-        teller++;
+       teller++;
 
         if (teller >= tellerMax && teller == Random.Range(tellerMax, randomMax))
-        {
-            lijstGameObjects = new List<GameObject>();
+        { /*
+            lijstGameObjects = new List<GameObject>();// hadden we deze lijst al niet in de start functie? 
             lijstGameObjects.Add(GameObject.Find("Schuur"));
             lijstGameObjects.Add(GameObject.Find("Huis"));
             lijstGameObjects.Add(GameObject.Find("Mesthoop"));
@@ -69,6 +124,7 @@ public class GameManager : MonoBehaviour
             lijstGameObjects.Add(GameObject.Find("Bomen_Den"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Eik"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Spar"));
+            */
 
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
@@ -88,7 +144,7 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
+/*
     void OnMouseDown()
     {
        
@@ -115,7 +171,7 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.Find("LevelMetTriggers"));
         }
     }
-    
+    */
 
     void makeGlitch(GameObject randomObject)
     {

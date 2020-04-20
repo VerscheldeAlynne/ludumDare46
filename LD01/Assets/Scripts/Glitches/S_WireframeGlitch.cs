@@ -30,7 +30,7 @@ public class S_WireframeGlitch : MonoBehaviour
         //float originalWireThickness = meshMaterial.GetFloat("_WireThickness");
         //float originalWireSmoothness = meshMaterial.GetFloat("_WireSmoothness");
 
-        Debug.Log("originalWireSmoothness");
+        //Debug.Log("originalWireSmoothness");
         //Debug.Log(meshMaterial.GetFloat("_WireSmoothness"));
 
         if (glitchOnSpawn == true)
@@ -69,5 +69,6 @@ public class S_WireframeGlitch : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().material = originalMaterial;
         CancelInvoke("WireframeGlitch");
+        Debug.Log (gameObject.name + " stoped gliching");
     }
 }
