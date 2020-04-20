@@ -17,6 +17,11 @@ public class MoneyScript : MonoBehaviour
            
     }
 
+    public int getMoney()
+    {
+        return money;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -38,14 +43,14 @@ public class MoneyScript : MonoBehaviour
 
     public void spendMoney(int aantal)
     {
-        if (money - aantal >= 0)
-        {
+        //if (money - aantal >= 0)
+        //{
             money -= aantal;
             UpdateText();
             //playsound
-        }else{
+       // }else{
             //play no money sound
-        }
+        //}
         //Debug.Log("money= " + money); 
     }
 

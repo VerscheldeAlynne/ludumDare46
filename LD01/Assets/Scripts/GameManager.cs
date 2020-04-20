@@ -58,13 +58,20 @@ public class GameManager : MonoBehaviour
             lijstGameObjects.Add(GameObject.Find("Mesthoop"));
             lijstGameObjects.Add(GameObject.Find("Waterput"));
             lijstGameObjects.Add(GameObject.Find("Veld"));
+            lijstGameObjects.Add(GameObject.Find("Bomen_Berk"));
+            lijstGameObjects.Add(GameObject.Find("Bomen_Den"));
+            lijstGameObjects.Add(GameObject.Find("Bomen_Eik"));
+            lijstGameObjects.Add(GameObject.Find("Bomen_Spar"));
 
 
 
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int random = Random.Range(1, lijstGameObjects.Count);
             GameObject randomObject = lijstGameObjects[random];
-            makeGlitch(randomObject);
+            if (randomObject != null)
+            {
+                makeGlitch(randomObject);
+            }
         }
 
         if (teller == 150) teller = 50;
