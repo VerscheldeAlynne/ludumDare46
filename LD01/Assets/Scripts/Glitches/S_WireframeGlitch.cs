@@ -12,6 +12,8 @@ public class S_WireframeGlitch : MonoBehaviour
     public float glitchFrequency = .15f;
     public bool glitchOnSpawn = false;
 
+    Material originalMaterial;
+
     Shader wireframeShader;
     Material wireframeMaterial;
     WaitForSeconds glitchLoopWait = new WaitForSeconds(0.1f);
@@ -23,7 +25,7 @@ public class S_WireframeGlitch : MonoBehaviour
     void Start()
     {
         wireframeMaterial = new Material(Shader.Find("SuperSystems/Wireframe-Transparent-Culled"));
-        //meshMaterial = GetComponent<Renderer>().material;
+        originalMaterial = GetComponent<Renderer>().material;
 
         //float originalWireThickness = meshMaterial.GetFloat("_WireThickness");
         //float originalWireSmoothness = meshMaterial.GetFloat("_WireSmoothness");
@@ -61,5 +63,11 @@ public class S_WireframeGlitch : MonoBehaviour
         //}
         gameObject.GetComponent<Renderer>().material = wireframeMaterial;
         InvokeRepeating("WireframeGlitch", 0, glitchFrequency);
+    }
+
+    public void StopGlitching()
+    {
+        gameObject.GetComponent<Renderer>().material = originalMaterial;
+        CancelInvoke("WireframeGlitch");
     }
 }

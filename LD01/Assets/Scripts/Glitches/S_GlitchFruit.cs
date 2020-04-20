@@ -101,8 +101,19 @@ public class S_GlitchFruit : MonoBehaviour
         }
     }
 
-  public  void StartGlitching()
+    public void StartGlitching()
     {
         InvokeRepeating("GlitchFruit", 0, glitchFrequency);
+    }
+
+    public void StopGlitching()
+    {
+        gameObject.GetComponents<MeshRenderer>()[0].enabled = true;
+        meshRed.GetComponents<MeshRenderer>()[0].enabled = false;
+        meshBlue.GetComponents<MeshRenderer>()[0].enabled = false;
+        meshRed.transform.localPosition = (gameObject.transform.localPosition);
+        meshBlue.transform.localPosition = (gameObject.transform.localPosition);
+
+        CancelInvoke("GlitchFruit");
     }
 }
