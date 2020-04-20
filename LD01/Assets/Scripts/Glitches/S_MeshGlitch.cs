@@ -60,4 +60,9 @@ public class S_MeshGlitch : MonoBehaviour
     {
         InvokeRepeating("MeshGlitch", 0, glitchFrequency);
     }
+
+    public void StopGlitching()
+    {
+        CancelInvoke("MeshGlitch");
+    }
 }
