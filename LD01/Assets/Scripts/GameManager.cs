@@ -5,24 +5,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int teller = 0;
-    public AudioClip crashSound;
-    public AudioClip startGlitchSound;
-    public AudioClip fixGlitchSound;
-    public List<GameObject> lijstGameObjects;
 
+    public int teller = 0;
     int tellerMax = 500;
     int randomMax = 560;
     int clickteller = 0;
-    bool crashSoundPlayed = false;
+    public List<GameObject> lijstGameObjects;
     //   public List<Planten> planten;
 
     MoneyScript money;
 
     // Start is called before the first frame update
     void Start()
-    {
-        //List<GameObject> 
+    {//List<GameObject> 
         lijstGameObjects = new List<GameObject>();
         lijstGameObjects.Add(GameObject.Find("Schuur"));
         lijstGameObjects.Add(GameObject.Find("Huis"));
@@ -30,7 +25,7 @@ public class GameManager : MonoBehaviour
         lijstGameObjects.Add(GameObject.Find("Waterput"));
         lijstGameObjects.Add(GameObject.Find("Veld"));
 
-        /*     planten = new List<Planten>();
+   /*     planten = new List<Planten>();
 
         for (int i = 0; i < planten.Count; i++)
         {
@@ -45,6 +40,7 @@ public class GameManager : MonoBehaviour
             //lijstGameObjects[i].AddComponent<S_MeshGlitch>();
             lijstGameObjects[i].AddComponent<S_WireframeGlitch>();
 
+
         }
 
         if (FindObjectsOfType<MoneyScript>().Length != 0)
@@ -54,70 +50,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        
-        if (money.getMoney() <= 0 && clickteller >= 2)
-        {
-            PlayCrashSound();
-            Destroy(GameObject.Find("LevelMetTriggers"));
-        }
-        
-        if (Input.GetMouseButtonDown(0)){
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast (ray, out hit)){
-                GameObject clickedObject = hit.collider.transform.gameObject;
-                if (clickedObject.GetComponent<S_GlitchFruit>() != null)
-                {
-                    Debug.Log ("clicked glitchable object");
-                    var script = clickedObject.GetComponent<S_GlitchFruit>();
-                    
-                    //money.spendMoney (5); gebeurt in het glitchscript
-
-                    ////////
-                    clickteller++;
-
-                    if (script.glitching)
-                    {
-                        script.StopGlitching();
-                        var script2 = clickedObject.GetComponent<S_WireframeGlitch>();
-                        script2.StopGlitching();
-
-                        PlayGlitchFixSound();
-                        money.spendMoney(3);
-                    }
-
-                    /*int random = Random.Range(0, 9);
-
-                    //money.spendMoney(++random);
-
-                    if (random >= 8) Destroy(clickedObject);
-                    else
-                    {
-                        var script = clickedObject.GetComponent<S_GlitchFruit>();
-                        script.StopGlitching();
-                        var script3 = clickedObject.GetComponent<S_WireframeGlitch>();
-                        script3.StopGlitching();
-
-                        GetComponent<AudioSource>().Play();
-                    }*/
-                }
-
-
-            }
-        }
-    }
-
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private void FixedUpdate()
     {
-       teller++;
+        teller++;
 
         if (teller >= tellerMax && teller == Random.Range(tellerMax, randomMax))
-        { /*
-            lijstGameObjects = new List<GameObject>();// hadden we deze lijst al niet in de start functie? 
+        {
+
+            lijstGameObjects = new List<GameObject>();
             lijstGameObjects.Add(GameObject.Find("Schuur"));
             lijstGameObjects.Add(GameObject.Find("Huis"));
             lijstGameObjects.Add(GameObject.Find("Mesthoop"));
@@ -127,7 +68,8 @@ public class GameManager : MonoBehaviour
             lijstGameObjects.Add(GameObject.Find("Bomen_Den"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Eik"));
             lijstGameObjects.Add(GameObject.Find("Bomen_Spar"));
-            */
+
+
 
             //List<GameObject> lijstGameObjects = GetAllObjectsOnlyInScene();
             int randomvoorlijst = Random.Range(1, lijstGameObjects.Count);
@@ -140,46 +82,29 @@ public class GameManager : MonoBehaviour
 
         if (teller >= randomMax) teller = tellerMax;
 
+
+
+
         if (money.getMoney() < 0 )
         {
-            PlayCrashSound();
             Destroy(GameObject.Find("LevelMetTriggers"));
 
         }
     }
-/*
+
     void OnMouseDown()
     {
        
-<<<<<<< HEAD
             clickteller++;
 
 
             int random = Random.Range(0, 10);
-=======
-        clickteller++;
->>>>>>> 96dd1c45f6b90e470d2829d1330421f81b3fba41
 
-        int random = Random.Range(0, 9);
 
-<<<<<<< HEAD
             money.spendMoney(random++);
-=======
-        money.spendMoney(++random);
->>>>>>> 96dd1c45f6b90e470d2829d1330421f81b3fba41
 
-        if (random >= 8) Destroy(gameObject);
-        else
-        {
-            var script = gameObject.GetComponent<S_GlitchFruit>();
-            script.StopGlitching();
-            var script3 = gameObject.GetComponent<S_WireframeGlitch>();
-            script3.StopGlitching();
 
-            GetComponent<AudioSource>().Play();
-        }
 
-<<<<<<< HEAD
             if (random >= 8) Destroy(gameObject);
             else
             {
@@ -198,17 +123,10 @@ public class GameManager : MonoBehaviour
                 Destroy(GameObject.Find("LevelMetTriggers"));
 
             }
-=======
-        if (money.getMoney() <= 0 && clickteller >= 2)
-        {
-            PlayCrashSound();
-            Destroy(GameObject.Find("LevelMetTriggers"));
->>>>>>> 96dd1c45f6b90e470d2829d1330421f81b3fba41
         }
-    }
-    */
+    
 
-    void makeGlitch(GameObject randomObject)
+        void makeGlitch(GameObject randomObject)
     {
 
         if (randomObject.GetComponent<S_GlitchFruit>() != null)
@@ -240,38 +158,10 @@ public class GameManager : MonoBehaviour
 
                 //    break;
             }
-<<<<<<< HEAD
            // Debug.Log("Glitch should have happened");
         }
         //Debug.Log("makeGlitch called");
-=======
-            Debug.Log("Glitch should have happened");
-            PlayStartGlitchSound();
-        }
-        Debug.Log("makeGlitch called");
-    }
->>>>>>> 96dd1c45f6b90e470d2829d1330421f81b3fba41
 
-    void PlayCrashSound()
-    {
-        if (!GetComponent<AudioSource>().isPlaying && !crashSoundPlayed)
-        { 
-            GetComponent<AudioSource>().clip = crashSound;
-            GetComponent<AudioSource>().Play();
-            crashSoundPlayed = true;
-        }
-    }
-
-    void PlayStartGlitchSound()
-    {
-        GetComponent<AudioSource>().clip = startGlitchSound;
-        GetComponent<AudioSource>().Play();
-    }
-
-    void PlayGlitchFixSound()
-    {
-        GetComponent<AudioSource>().clip = fixGlitchSound;
-        GetComponent<AudioSource>().Play();
     }
 
    /* List<GameObject> GetAllObjectsOnlyInScene()
